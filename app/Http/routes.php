@@ -14,7 +14,10 @@
 Route::get('/', 'WelcomeController@index');
 
 Route::get('home', 'HomeController@index');
-Route::get('/member', 'HomeController@index');
+
+Route::get('register', 'RegisterController@index');
+
+Route::post('register/user', 'RegisterController@registerMember');
 /*
 |--------------------------------------------------------------------------
 | Authentication & Password Reset Controllers
