@@ -13,6 +13,6 @@ class RegisterController extends Controller {
         $name = Input::get('name');
         $email = Input::get('email');
         $password = Input::get('password');
-        return $name;
+        $password = Hash::make('secret');
       }
 }
