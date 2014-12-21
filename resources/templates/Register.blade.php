@@ -3,20 +3,20 @@
     <title>Register</title>
   </head>
   <body>
+    
+    {{ Form::open(array('action' => 'RegisterController@registerMember', 'method' => 'post')) }}
 
-  <!--  {{ Form::open(array('action' => 'RegisterController@registerMember', 'method' => 'post')) }}
+    {{ Form::label('name', 'Name') }}
+    {{ Form::text('name') }}
 
-        {{ Form::label('name', 'Name') }}
-        {{ Form::text('name') }}
+    {{ Form::label('email', 'Email') }}
+    {{ Form::email('email') }}
 
-        {{ Form::label('email', 'Email') }}
-        {{ Form::email('email') }}
+    {{ Form::label('password', 'Password') }}
+    {{ Form::password('password') }}
 
-        {{ Form::label('password', 'Password') }}
-        {{ Form::password('password') }}
+    {{ Form::submit('Update!') }}
 
-        {{ Form::submit('Update!') }}
-
-    {{ Form::close() }}-->
+    {{ Form::close() }}
   </body>
 </html>
